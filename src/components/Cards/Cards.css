@@ -1,0 +1,93 @@
+
+.Clearradiobtn{
+   float: right;
+   height: 30px;
+   width: 30px;
+    
+   
+}
+.Cardss{
+    /* border: slateblue solid; */
+    margin-top: 132rem;
+   
+}
+.allCards {
+     /* border:  solid black; */
+     
+    
+    margin: 10px;
+    border-radius: 20px;
+    height: 230px;
+    width: 700px;
+    background-color: white;
+}
+.studentstatus{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    color: dodgerblue;
+    
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 11rem;
+    width: 330px;
+
+    
+}
+
+.cardsReminderbtn{
+    display: flex;
+    
+    height: 40px;
+    width: 110px;
+    margin-bottom: 5px;
+    
+}
+.cardsCheckIssuebtn{
+    display: flex;
+    height: 40px;
+    width: 110px;
+}
+.cardsRemarks{
+    display: flex;
+
+    height: 40px;
+    width: 110px;
+}
+.cardsClearenceproformabtn{
+   
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    float: right;
+    border-radius: 20px;
+
+}
+@media screen and (max-width: 800px){
+    .allCards{
+        width: 400px;
+        height: 230px;
+    }
+    }
+@media screen and (max-width: 500px){
+.allCards{
+    width: 280px;
+    height: 230px;
+}
+.studentstatus{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    color: wheat;
+}
+.cardsClearenceproformabtn{
+   
+    display: inline-flex;
+    justify-content: center;
+    width: 250px;
+    /* float: right; */
+    border-radius: 20px;
+    margin-right: 20px;
+
+}
+}

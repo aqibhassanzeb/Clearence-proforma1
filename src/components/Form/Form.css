@@ -1,0 +1,44 @@
+
+.container-form{
+    margin-top: 40rem;
+    width: 700px;
+    padding: 25px 40px 10px 40px;
+    background-color: white;
+    box-shadow: 10px 10px 10px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+    /* border: solid black; */
+}
+.Uostitle{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 46px;
+} 
+
+.clearenceproformaname{
+    display: flex;
+    justify-content: center;
+    /* padding-bottom: 10px; */
+}
+.studentsignature{
+    display: flex;
+    justify-content: right;
+
+}
+.formlogo{
+    margin-top: 10px;
+    height: 110px;
+    width: 110px;
+}
+@media screen and (max-width: 800px) {
+    .container-form{
+        width: 500px;
+        margin-top: 25rem ;
+    }   
+}
+@media screen and (max-width: 500px) {
+    .container-form{
+        width: 370px;
+        margin-top: 30rem ;
+    }   
+}
