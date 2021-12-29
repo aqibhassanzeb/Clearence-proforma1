@@ -5,15 +5,13 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-body{
-  width: 100%;
-  /* position: fixed; */
-  height: 100vh;
+.SignUpmail{
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background: #5372F0; */
+  min-height: 100vh; 
 }
+
 ::selection{
   color: #fff;
   /* background: #5372F0; */
@@ -26,7 +24,8 @@ height: 450px;
   background: #fff;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 10px 10px 15px rgba(0,0,0,0.1);
+  box-shadow: 0px 10px 20px 20px rgba(0, 0, 0, 0.1)!important;
+  border: 1.5px solid #bbb9b9;
 }
 .wrapper header{
   font-size: 35px;

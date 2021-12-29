@@ -7,23 +7,28 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
-  /* display: flex;
+ 
+  /* padding: 40px;  */
+  /* background: #5372F0; */
+}
+.SignupForm{
+  display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  padding: 40px; */
-  background: #5372F0;
+  min-height: 100vh; 
 }
-.container{
+.signupformcontainer{
   max-width: 800px;
   background: #fff;
   width: 800px;
   padding: 25px 40px 10px 40px;
-  box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+  box-shadow: 0px 10px 20px 20px rgba(0, 0, 0, 0.1);
+  border: 1.5px solid #bbb9b9;
   border-radius: 10px;
+
   
 }
-.container .text{
+.signupformcontainer .text{
   text-align: center;
   font-size: 35px;
   font-weight: 600;
@@ -32,10 +37,10 @@ body{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.container form{
+.signupformcontainer form{
   padding: 30px 0 0 0;
 }
-.container form .form-row{
+.signupformcontainer form .form-row{
   display: flex;
   margin: 32px 0;
 }
@@ -166,20 +171,21 @@ background-color: #3498db;
   background-color: dodgerblue;
 }
 @media screen and (max-width: 770px) {
-  .container{
+  .signupformcontainer{
     font-size: 30px;
   
     width: 350px;
+    margin-top: 3rem;
  
   }
   #heading{
   
     font-size: 17px;
   }
-  .container form{
+  .signupformcontainer form{
     padding: 10px 0 0 0;
   }
-  .container form .form-row{
+  .signupformcontainer form .form-row{
     display: block;
   }
   form .form-row .input-data{
@@ -205,7 +211,7 @@ background-color: #3498db;
  
  }
  /* @media screen and (max-width:780px) and  (min-width:500) {
-  .container{
+  .signupformcontainer{
     font-size: 30px;
   
     width: 600px;
@@ -213,7 +219,7 @@ background-color: #3498db;
    
    
   }
-  .container form{
+  .signupformcontainer form{
     padding: 10px 0 0 0;
   }
 

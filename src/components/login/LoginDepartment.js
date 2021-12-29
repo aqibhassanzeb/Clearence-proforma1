@@ -1,9 +1,10 @@
 import React from 'react'
+import { GiMailbox } from 'react-icons/gi';
 import './Login.css'
-import {Link, useHistory} from 'react-router-dom'
 
-const Login = () => {
-  const history=useHistory();
+
+const LoginDepartment = () => {
+  
     return (
       <div className='Login'>
       <div className="login-wrapper">
@@ -25,13 +26,17 @@ const Login = () => {
           </div>
           <div className="error error-txt">Password can't be blank</div>
         </div>
-        <div className="pass-txt"><a href="#">Forgot password?</a></div>
+       
         <input type="submit" value="Login"/>
+        {/* <hr/> */}
+        {/* <p>For Thechnical Issue</p> */}
+        {/* <Link onPress={() => Linking.openURL('aqibhassanzeb@gmail.com') } className='emaillinkdepttloginpage'>aqibhassanzeb@gmail.com</Link> */}
+       
       </form>
-      <div className="sign-txt">Not yet member? <Link to="/signup">Signup now</Link></div>
+      
     </div>
     </div>
     )
 }
 
-export default Login;
+export default LoginDepartment;

@@ -4,9 +4,11 @@ import image from './universityofswabi.jpg'
 
 const Form = () => {
     return (
+      <>
+      <div className='Form'>
         <div className='container-form'>
            <div className='row'>
-              <img className='col-4 formlogo' src={image} alt="University Of Swabi" />
+              <img className='col-lg-4 col-md-6 col-sm-6 formlogo' src={image} alt="University Of Swabi" />
               <h1  className='col-8 Uostitle '>University Of Swabi</h1>
             <h3 className='col-12 clearenceproformaname '>Clearence Proforma</h3> 
             </div>
@@ -98,9 +100,13 @@ const Form = () => {
             <div className='row'>
             <h5 className='studentsignature'>Student Signature </h5> 
             </div>
+            </div>
         
         </div>
-        
+        <div className='btnpcprotion'>
+            <button className='btnprintcertificate btn-primary'>Print Certificate</button>
+            </div>
+        </>     
     )
 }
 

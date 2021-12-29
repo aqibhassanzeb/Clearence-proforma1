@@ -1,0 +1,59 @@
+.studenthomepage{
+    text-align: center;
+    min-height: 100vh;
+    margin-top: 80px; 
+}
+.wellcomeuniversitytext{
+    font: bold;
+    font-size: 3rem;
+}
+.wellcomeclearencetext{
+    font-size: 35px;
+}
+.wellcomenametext{
+    font-size: 35px;
+    color: green;
+}
+.homepagebuttons{
+margin-top: 40px;
+
+}
+.btnhomepage1{
+    margin: 20px;
+    border-radius: 20px;
+    width: 150px;
+    height: 40px;
+}
+
+.btnhomepage1:hover{
+    box-shadow: 2px 5px 9px 5px #adadad;
+}
+
+@media screen and (max-width: 510px){
+.wellcomeuniversitytext{
+    font-size: 2rem;
+}
+.wellcomenametext{
+    font-size: 25px;
+}
+.wellcomeclearencetext{
+    font-size: 25px;
+}
+}
+@media screen and (max-width: 340px){
+.wellcomeuniversitytext{
+    font-size: 25px;
+}
+.wellcomeclearencetext{
+    font-size: 20px;
+}
+.wellcomenametext{
+    font-size: 20px;
+}
+.btnhomepage1{
+    width: 100px;
+    margin: 20px;
+
+}
+
+}

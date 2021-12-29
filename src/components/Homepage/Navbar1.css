@@ -1,0 +1,27 @@
+.homelogo{
+    width: 250px!important;
+    height: 40px;
+}
+.navbaritemlink{
+    color: white!important;
+   
+}
+.navbarbutton1{
+    color: white!important;
+    border: 1px solid white!important;
+    border-radius: 20px;
+    
+    }
+    .navbarbutton1:hover{
+        color: white!important;
+    background-color: #5a472a!important;
+    }
+    .navbaritemlink:hover{
+        background-color: rgb(39, 38, 38);
+        border-radius: 30px;
+        box-shadow: 1px 1px 10px 0px #adadad;
+        color: #d5953b!important;
+    }
+    .searchtextfield{
+        border-radius: 25px;
+    }

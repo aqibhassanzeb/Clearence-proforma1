@@ -1,0 +1,58 @@
+.Home{
+    text-align: center;
+    min-height: 100vh;
+    margin-top: 80px; 
+}
+.wellcomeuniversitytext{
+    font: bold;
+    font-size: 3rem;
+}
+.wellcomeclearencetext{
+    font-size: 35px;
+}
+.homepagebuttons{
+margin-top: 40px;
+
+}
+.btnhomepage12{
+    margin: 30px;
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+}
+.btnhomepage2{
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+}
+.btnhomepage12:hover{
+    box-shadow: 2px 5px 9px 5px #adadad;
+}
+.btnhomepage2:hover{
+    box-shadow: 2px 5px 9px 5px #adadad;
+}
+@media screen and (max-width: 510px){
+.wellcomeuniversitytext{
+    font-size: 2rem;
+}
+.wellcomeclearencetext{
+    font-size: 25px;
+}
+}
+@media screen and (max-width: 340px){
+.wellcomeuniversitytext{
+    font-size: 25px;
+}
+.wellcomeclearencetext{
+    font-size: 20px;
+}
+.btnhomepage12{
+    width: 150px;
+    margin: 20px;
+
+}
+.btnhomepage2{
+    width: 150px;
+
+}
+}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import image from './universityofswabi.jpg'
+import './Navbar1.css'
 
 import { GiHamburgerMenu } from "react-icons/gi";
 

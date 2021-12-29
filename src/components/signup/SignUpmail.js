@@ -5,6 +5,7 @@ import './SignUpmail.css'
 const SignUpmail = () => {
   const history =useHistory();
     return (
+      <div className='SignUpmail'>
       <div className="wrapper">
       <header className='loginwriting'>Registration Form</header>
       <form action="#">
@@ -46,6 +47,7 @@ const SignUpmail = () => {
                   </div> </div></div>
       </form>
       
+    </div>
     </div>
     )
 }

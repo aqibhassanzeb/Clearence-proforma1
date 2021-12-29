@@ -8,10 +8,10 @@ const SignupForm = () => {
    const history=useHistory();
 
    return (
-      <div>
+      <div className='SignupForm'> 
 
 
-         <div className="container ">
+         <div className="signupformcontainer ">
             <div className='signupformwrapper'>
                <div className="text" id='heading'>CLEARENCE PROFORMA</div>
                <div className="text" id='heading'>Registration Form</div>
