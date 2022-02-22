@@ -1,11 +1,12 @@
 import { Dropdown } from 'bootstrap'
 import React from 'react'
-import {useHistory} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+// import {useHistory} from 'react-router-dom'
 import './SignupForm.css'
 
 
 const SignupForm = () => {
-   const history=useHistory();
+   const navigate=useNavigate();
 
    return (
       <div className='SignupForm'> 
@@ -13,7 +14,7 @@ const SignupForm = () => {
 
          <div className="signupformcontainer ">
             <div className='signupformwrapper'>
-               <div className="text" id='heading'>CLEARENCE PROFORMA</div>
+               <div className="text" id='heading'>CLEARANCE PROFORMA</div>
                <div className="text" id='heading'>Registration Form</div>
 
                <form action="#">
@@ -70,7 +71,7 @@ const SignupForm = () => {
                   <div className="form-row">
 
 
-                     <div className="dropdown">
+                     {/* <div className="dropdown">
                         <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                            Department Select
                         </button>
@@ -83,8 +84,26 @@ const SignupForm = () => {
                            <li><a className="dropdown-item" href="#">Physics</a></li>
                            <li><a className="dropdown-item" href="#">Physics</a></li>
                         </ul>
-                     </div>
+                     </div> */}
+                     <div className='col-lg-5 col-md-5  selectitemoption'>
+            <label className='selectdepttlabel'>Select Department</label>
+            <select
+            name="Department"
+            id="selectDeptt"
+            className="form-control"
+            placeholder='Select'
+            >
+            <option value="0">
+               Computer Science
+            </option>
+            <option value="1">English</option>
+            <option value="2">Pharmacy</option>
+            <option value="3">Agriculture</option>
+            <option value="4">Geology</option>
+           
+          </select>
 
+             </div>
 
                   </div>
                   {/* <div className="row " >
@@ -108,11 +127,11 @@ const SignupForm = () => {
                         <div className='col-lg-12 col-sm-12  ' id='button2'   >
 
                            <button type="button" className="btn btn-primary" id='Btnsignupformback'
-                           onClick={history.goBack}
+                           onClick={()=>navigate(-1)}
                            >Back</button>
 
                            <button type="button" className="btn btn-primary" id='Btnsignupformnext'
-                           onClick={()=> history.push('/signupmail')}
+                           onClick={()=> navigate('/signupmail')}
                            >Next</button>
                         </div>
 

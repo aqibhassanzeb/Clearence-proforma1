@@ -1,0 +1,15 @@
+.accountrequeststudenttable{
+    margin-top: 30px;
+}
+.accountrequeststudentheading{
+    text-align: center;
+    margin-top: 30px;
+}
+@media screen and (max-width:500px) {
+    .accountrequeststudentheading{
+        text-align: center;
+       font-size: 15px ;
+    }
+
+}
+

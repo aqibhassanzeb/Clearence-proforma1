@@ -1,0 +1,14 @@
+.dropdown-menu{
+    margin-left: 360px;
+}
+
+@media screen and (max-width:991px){
+    .dropdown-menu{
+        margin: 0%;
+    }
+    
+}
+
+
+
+/* @media screen and (max-width: 340px) */

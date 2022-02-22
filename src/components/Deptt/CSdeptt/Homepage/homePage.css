@@ -1,12 +1,31 @@
 .Homepagediv{
     text-align: center;
     min-height: 100vh;
-    margin-top: 80px; 
+    margin-top: 100px; 
 }
-.wellcomcshomepage .uostextcshomepage{
-font-style: normal;
+.wellcomcshomepage, .uostextcshomepage {
+font-size: 70px;
+font-weight: bold;
 }
 .depttofcstext{
-    font-size: 30px;
+    font-size: 35px;
     color: rgb(97, 141, 54);
+}
+@media screen and (max-width:800px) {
+    .wellcomcshomepage, .uostextcshomepage {
+        font-size: 50px;
+        }
+        .depttofcstext{
+            font-size: 25px;
+         
+        }   
+}
+@media screen and (max-width:550px) {
+    .wellcomcshomepage, .uostextcshomepage {
+        font-size: 30px;
+        }
+        .depttofcstext{
+            font-size: 15px;
+         
+        }   
 }

@@ -1,9 +1,10 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom'
 import './SignUpmail.css'
 
 const SignUpmail = () => {
-  const history =useHistory();
+  const navigate =useNavigate();
     return (
       <div className='SignUpmail'>
       <div className="wrapper">
@@ -41,7 +42,7 @@ const SignUpmail = () => {
                   </div>
                   <div className=' '>
                   <button type="button" className="btn btn-primary" id='Btnsigupmailback'
-                  onClick={history.goBack}
+                  onClick={() => navigate(-1)}
                   >Back</button>
                 
                   </div> </div></div>

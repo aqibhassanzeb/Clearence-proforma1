@@ -1,7 +1,15 @@
 import React, { useState } from 'react'
-import { Button } from 'bootstrap'
+import { useNavigate } from 'react-router-dom';
 import './Studentstatus.css'
+import {
+  AiFillBell,
+   AiFillQuestionCircle,
+ } from "react-icons/ai";
+import {reminder} from "../../assets/images/bellicon.png"
+import Studenthomepagenavbar from '../StudentHomepage/studenthomepagenavbar'
 const Studentstatus = () => {
+const navigate=useNavigate();
+   const [disabled, setDisabled] = useState(true)
    const [count, setCount] = useState([
         {
         
@@ -61,25 +69,56 @@ const Studentstatus = () => {
     )
    return(
 <>
-        {
-            count.map((elem)=>(
-               
-                    <div>
-                    <h1>{elem.Faculty}</h1>
-                   <div className='row'>
-                    <button className='col-2 cardreminderbutton' >Reminder</button>
-                    <button className='col-2 cardissuebutton'>Issue</button>
-                    <input className='col-5 cardcheckbox'  type="checkbox" />
-                       </div>
-                    <hr/>
-                    </div>
+       
+      <Studenthomepagenavbar/>
+<div>
+             <>
+        <h1 className='headingstudentstatus'>Student Status</h1>
+        <div  style={{overflow: "auto"}}>
+            
+            <table className="table tablestudentstatus ">
+  <thead>
+    <tr >
+      <th scope="col">Faculty Name</th>
+      <th scope="col">Reminder</th>
+      <th scope="col">Issue</th>
+      <th scope="col">Remarks</th>
+      <th scope="col">Done</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  {
+    count.map((elem)=>
+    
+    <tr key={elem.Faculty}>
+      <th scope="row" className='facultytext'>{elem.Faculty}</th>
+      <td><AiFillBell className="bellicon" /></td>
+      <td><a href='' style={{pointerEvents:''}}><AiFillQuestionCircle    className="bellicon"  /></a></td>
+      <td><p >remarks</p></td>
+      <td><p style={{color:'blue'}}>process...</p></td>
+      {/* <td><AiFillCheckCircle className="bellicon" /></td> */}
+    </tr>
+    
+    )
+}    
+  </tbody>
+</table>
+        </div>
+        </>
+        </div>
+
+<div className='cardsClearenceproformabtndiv'>
+<button className='btn-primary cardsClearenceproformabtn' onClick={()=>navigate("/form")}>Get Certificate</button>
+</div>
+
+
                     
-                    )
-                )
+                    
+                
 
-        }
+        
 
-{/* <Button variant="primary"  className='cardsClearenceproformabtn'>Clearence Proforma</Button> */}
 </>
        )
 }

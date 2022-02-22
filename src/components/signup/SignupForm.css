@@ -170,6 +170,9 @@ background-color: #3498db;
 .dropdown-item:hover{
   background-color: dodgerblue;
 }
+.selectitemoption{
+  margin-left: 20px;
+}
 @media screen and (max-width: 770px) {
   .signupformcontainer{
     font-size: 30px;
@@ -194,7 +197,12 @@ background-color: #3498db;
   .submit-btn .input-data{
     /* width: 40% */
   }
-
+.selectitemoption{
+  margin: 0%;
+}
+.selectdepttlabel{
+  font-size: 17px;
+}
 
 
 

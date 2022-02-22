@@ -1,14 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Button, Modal } from 'react-bootstrap';
 import Navbar1 from '../Homepage/Navbar1'
 import './StudentHomepage.css'
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import Studenthomepagenavbar from './studenthomepagenavbar';
 
 
-const StudentHomepage = () => {
-    const history=useHistory();
+function MyVerticallyCenteredModal(props) {
     return (
-        <div>
+      <Modal
+        {...props}
+        size="md"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            Clearacne-Proforma
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          {/* <h4>Centered Modal</h4> */}
+          <p>
+          Are you sure to apply for Clearence Proforma! 
+          </p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={props.onHide}>Close</Button>
+          <Button >Conform</Button>
+        </Modal.Footer>
+      </Modal>
+    );
+  }
+
+
+const StudentHomepage = () => {
+    // const history=useHistory();
+    const Approved=()=>{
+        window.alert('Are you sure to apply for Clearence Proforma! ')
+    }
+    const [modal, setmodal] = useState(false)
+    return (
+       
              <>
         <Studenthomepagenavbar/>
         <div className='studenthomepage'>
@@ -19,14 +52,21 @@ const StudentHomepage = () => {
         
         <div className='homepagebuttons'>
         <button className='btnhomepage1 btn-primary'
-         onClick={()=> history.push('/login')}
+         onClick={()=>setmodal(true)} 
         >Apply</button>
         <br/>
-       
+        <MyVerticallyCenteredModal
+        show={modal}
+        onHide={() => setmodal(false)}
+      />
         </div>
         </div>
+
+
+        
+        
         </>
-        </div>
+      
     )
 }
 

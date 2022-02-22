@@ -1,11 +1,12 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
-import uoslogo from '../../assets/images/UOswabi.png'
-import './Navbar1.css'
-import { useNavigate } from 'react-router'
+import { NavLink, useNavigate } from 'react-router-dom'
+import uoslogo from '../../../../assets/images/UOswabi.png'
+import '..//../../Homepage/Navbar1.css'
+import './DepttNavbar.css'
+// import { useHistory } from 'react-router'
 import { Navbar,  Nav, Container,Form,FormControl,Button } from 'react-bootstrap'
-const Navbar1 = () => {
-    let navigate = useNavigate()
+const DepttNavbar = () => {
+    let navigate = useNavigate();
     return (
         <div>
            
@@ -32,10 +33,17 @@ const Navbar1 = () => {
   {/* <a className="navbar-brand " ><img src={Logo} className='logo' /></a> */}
       
 
-        <Nav.Link className='navbaritemlink'  onClick={() => { navigate('/') }} >Home</Nav.Link>
-        <Nav.Link  className='navbaritemlink' onClick={() => { navigate('/signup') }}>SignUp</Nav.Link>
+        <Nav.Link className=' navbaritemlink'  onClick={() => { navigate('/deptthomepage') }} >Home</Nav.Link>
+        <Nav.Link  className=' navbaritemlink dropdown-toggle' type='button' data-bs-toggle="dropdown" aria-expanded="true">StudentsRequest</Nav.Link>
+        
+        <ul className="dropdown-menu" aria-labelledby="btnGroupDrop1">
+      <li><Nav.Link className="dropdown-item" onClick={()=>{navigate('/accountrequeststudent')}}>Account Requests</Nav.Link></li>
+      <li><Nav.Link className="dropdown-item" onClick={()=>{navigate('/clearencerequeststudent')}}>Clearence Requests</Nav.Link></li>
+      <li><Nav.Link className="dropdown-item" onClick={()=>{navigate('/pendingstudents')}}>Pending Students</Nav.Link></li>
+    </ul>
+      
         <Nav.Link className='navbaritemlink' onClick={() => { navigate('/career') }}>Help</Nav.Link>
-        <Nav.Link className='navbaritemlink' onClick={() => { navigate('/contact') }}>AboutUs</Nav.Link>
+        <Nav.Link className='navbaritemlink' onClick={() => { navigate('/contact') }}>SignOut</Nav.Link>
         
       
       </Nav>
@@ -56,4 +64,4 @@ const Navbar1 = () => {
     )
 }
 
-export default Navbar1
+export default DepttNavbar

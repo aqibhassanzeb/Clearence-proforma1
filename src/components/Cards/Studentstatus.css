@@ -1,6 +1,33 @@
-.cardreminderbutton{
-    margin: 10px;
+
+.headingstudentstatus{
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
 }
-.cardissuebutton{
-    margin: 10px;
+.tablestudentstatus{
+
+margin-top: 20px;
+
+}
+.bellicon{
+    width: 30px;
+    height: 30px;
+}
+.facultytext{
+    font-weight: bold;
+    font-size: 20px;
+
+}
+.cardsClearenceproformabtn{
+    margin: 20px;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+}
+.cardsClearenceproformabtndiv{
+    display: flex;
+    justify-content: center;
+}
+.cardsClearenceproformabtn:hover{
+    box-shadow: 2px 5px 9px 5px #adadad;
 }

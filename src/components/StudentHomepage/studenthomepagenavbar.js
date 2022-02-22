@@ -1,11 +1,11 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import uoslogo from '../../assets/images/UOswabi.png'
 import './Studenthomepagenavbar.css'
-import { useHistory } from 'react-router'
+// import { useHistory } from 'react-router'
 import { Navbar,  Nav, Container,Form,FormControl,Button } from 'react-bootstrap'
 const Studenthomepagenavbar = () => {
-    let history = useHistory();
+    let navigate=useNavigate();
     return (
         <div>
            
@@ -32,11 +32,11 @@ const Studenthomepagenavbar = () => {
   {/* <a className="navbar-brand " ><img src={Logo} className='logo' /></a> */}
       
 
-        <Nav.Link className='navbaritemlink'  onClick={() => { history.push('/studenthomepage') }} >Home</Nav.Link>
-        <Nav.Link  className='navbaritemlink' onClick={() => { history.push('/studentstatus') }}>Status</Nav.Link>
-        <Nav.Link className='navbaritemlink' onClick={() => { history.push('/career') }}>Help</Nav.Link>
-        <Nav.Link className='navbaritemlink' onClick={() => { history.push('/contact') }}>AboutUs</Nav.Link>
-        <Nav.Link className='navbaritemlink' onClick={() => { history.push('/contact') }}>LogOut</Nav.Link>
+        <Nav.Link className='navbaritemlink'  onClick={() => { navigate('/studenthomepage') }} >Home</Nav.Link>
+        <Nav.Link  className='navbaritemlink' onClick={() => { navigate('/studentstatus') }}>Status</Nav.Link>
+        <Nav.Link className='navbaritemlink' onClick={() => { navigate('/career') }}>Help</Nav.Link>
+        <Nav.Link className='navbaritemlink' onClick={() => { navigate('/contact') }}>AboutUs</Nav.Link>
+        <Nav.Link className='navbaritemlink' onClick={() => { navigate('/contact') }}>LogOut</Nav.Link>
         
       
       </Nav>

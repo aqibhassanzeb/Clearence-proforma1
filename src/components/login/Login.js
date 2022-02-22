@@ -1,9 +1,9 @@
 import React from 'react'
 import './Login.css'
-import {Link, useHistory} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 const Login = () => {
-  const history=useHistory();
+  // const history=useHistory();
     return (
       <div className='Login'>
       <div className="login-wrapper">

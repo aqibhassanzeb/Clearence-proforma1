@@ -1,10 +1,11 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom'
+//  import { useHistory } from 'react-router-dom';
 import './Home.css'
 import Navbar1 from './Navbar1'
 
 const Home = () => {
-    const history=useHistory();
+    const navigate=useNavigate();
     return (
 
         <>
@@ -15,11 +16,11 @@ const Home = () => {
         
         <div className='homepagebuttons'>
         <button className='btnhomepage12 btn-primary'
-         onClick={()=> history.push('/login')}
+         onClick={()=> navigate('/login')}
         >Student Login</button>
         <br/>
         <button className='btnhomepage2 btn-success' 
-         onClick={()=> history.push('/depttlogin')}
+         onClick={()=> navigate('/depttlogin')}
         >Department Login</button>
         </div>
         </div>
