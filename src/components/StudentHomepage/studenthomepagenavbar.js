@@ -2,7 +2,6 @@ import React from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import uoslogo from '../../assets/images/UOswabi.png'
 import './Studenthomepagenavbar.css'
-// import { useHistory } from 'react-router'
 import { Navbar,  Nav, Container,Form,FormControl,Button } from 'react-bootstrap'
 const Studenthomepagenavbar = () => {
     let navigate=useNavigate();
@@ -10,7 +9,7 @@ const Studenthomepagenavbar = () => {
         <div>
            
 
-<Navbar bg="dark" expand="lg" style={{position:"sticky"}} fixed='top' >
+<Navbar bg="dark" expand="lg"  fixed="top" >
   <Container fluid>
  <a href="https://uoswabi.edu.pk/">
   <img
@@ -29,27 +28,18 @@ const Studenthomepagenavbar = () => {
     ,marginLeft:'30px'}}
         navbarScroll
       >
-  {/* <a className="navbar-brand " ><img src={Logo} className='logo' /></a> */}
+ 
       
 
         <Nav.Link className='navbaritemlink'  onClick={() => { navigate('/studenthomepage') }} >Home</Nav.Link>
         <Nav.Link  className='navbaritemlink' onClick={() => { navigate('/studentstatus') }}>Status</Nav.Link>
-        <Nav.Link className='navbaritemlink' onClick={() => { navigate('/career') }}>Help</Nav.Link>
-        <Nav.Link className='navbaritemlink' onClick={() => { navigate('/contact') }}>AboutUs</Nav.Link>
-        <Nav.Link className='navbaritemlink' onClick={() => { navigate('/contact') }}>LogOut</Nav.Link>
+        <Nav.Link className='navbaritemlink' onClick={() => { navigate('#') }}>Help</Nav.Link>
+        <Nav.Link className='navbaritemlink' onClick={() => { navigate('#') }}>AboutUs</Nav.Link>
+        <Nav.Link className='navbaritemlink' onClick={() => { navigate('/') }}>LogOut</Nav.Link>
         
       
       </Nav>
-      <Form className="d-flex">
-        <FormControl
-        style={{color:'black'}}
-          type="search"
-          placeholder="Search"
-          className="me-2 searchtextfield"
-          aria-label="Search"
-        />
-        <Button className='navbarbutton1' variant="outline-success">Search</Button>
-      </Form>
+     
     </Navbar.Collapse>
   </Container>
 </Navbar>

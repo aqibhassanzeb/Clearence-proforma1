@@ -4,7 +4,7 @@ import uoslogo from '../../../../assets/images/UOswabi.png'
 import '..//../../Homepage/Navbar1.css'
 import './DepttNavbar.css'
 // import { useHistory } from 'react-router'
-import { Navbar,  Nav, Container,Form,FormControl,Button } from 'react-bootstrap'
+import { Navbar,  Nav, Container,Form,FormControl,Button, NavDropdown } from 'react-bootstrap'
 const DepttNavbar = () => {
     let navigate = useNavigate();
     return (
@@ -34,29 +34,20 @@ const DepttNavbar = () => {
       
 
         <Nav.Link className=' navbaritemlink'  onClick={() => { navigate('/deptthomepage') }} >Home</Nav.Link>
-        <Nav.Link  className=' navbaritemlink dropdown-toggle' type='button' data-bs-toggle="dropdown" aria-expanded="true">StudentsRequest</Nav.Link>
-        
-        <ul className="dropdown-menu" aria-labelledby="btnGroupDrop1">
-      <li><Nav.Link className="dropdown-item" onClick={()=>{navigate('/accountrequeststudent')}}>Account Requests</Nav.Link></li>
-      <li><Nav.Link className="dropdown-item" onClick={()=>{navigate('/clearencerequeststudent')}}>Clearence Requests</Nav.Link></li>
-      <li><Nav.Link className="dropdown-item" onClick={()=>{navigate('/pendingstudents')}}>Pending Students</Nav.Link></li>
-    </ul>
+      
+
+<NavDropdown title="StudentsRequest" className='navbaritemlink' id="navbarScrollingDropdowndeptt">
+          <NavDropdown.Item onClick={()=>{navigate('/accountrequeststudent')}}>Account Requests</NavDropdown.Item>
+          <NavDropdown.Item onClick={()=>{navigate('/clearencerequeststudent')}}>Clearence Requests</NavDropdown.Item>
+          <NavDropdown.Item onClick={()=>{navigate('/pendingstudents')}}>Pending Students</NavDropdown.Item>
+        </NavDropdown>
       
         <Nav.Link className='navbaritemlink' onClick={() => { navigate('/career') }}>Help</Nav.Link>
         <Nav.Link className='navbaritemlink' onClick={() => { navigate('/contact') }}>SignOut</Nav.Link>
         
       
       </Nav>
-      <Form className="d-flex">
-        <FormControl
-        style={{color:'black'}}
-          type="search"
-          placeholder="Search"
-          className="me-2 searchtextfield"
-          aria-label="Search"
-        />
-        <Button className='navbarbutton1' variant="outline-success">Search</Button>
-      </Form>
+      
     </Navbar.Collapse>
   </Container>
 </Navbar>

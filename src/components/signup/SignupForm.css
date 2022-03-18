@@ -6,11 +6,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-body{
- 
-  /* padding: 40px;  */
-  /* background: #5372F0; */
-}
+
 .SignupForm{
   display: flex;
   align-items: center;
@@ -213,22 +209,3 @@ background-color: #3498db;
 
 
 
-@media screen and (max-width: 800px) {
-  
-
- 
- }
- /* @media screen and (max-width:780px) and  (min-width:500) {
-  .signupformcontainer{
-    font-size: 30px;
-  
-    width: 600px;
-    height: 100vh;
-   
-   
-  }
-  .signupformcontainer form{
-    padding: 10px 0 0 0;
-  }
-
-} */

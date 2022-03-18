@@ -8,7 +8,7 @@ const SignUpmail = () => {
     return (
       <div className='SignUpmail'>
       <div className="wrapper">
-      <header className='loginwriting'>Registration Form</header>
+      <header className='loginwriting'>SignUp </header>
       <form action="#">
         <div className="field email">
           <div className="input-area">
@@ -38,10 +38,10 @@ const SignUpmail = () => {
         < div className='row'>
         <div className=' buttonssignupmail '>
                <div className=''> 
-                  <button type="button" className="btn btn-primary" id='Btnsignupmailsubmit'>Submit</button>
+                  <button type="button" className="btn signupmailformbtn" id='Btnsignupmailsubmit'>Submit</button>
                   </div>
                   <div className=' '>
-                  <button type="button" className="btn btn-primary" id='Btnsigupmailback'
+                  <button type="button" className="btn signupmailformbtn" id='Btnsigupmailback'
                   onClick={() => navigate(-1)}
                   >Back</button>
                 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { GiMailbox } from 'react-icons/gi';
+import { Link } from 'react-router-dom';
 import './Login.css'
 
 
@@ -26,12 +26,9 @@ const LoginDepartment = () => {
           </div>
           <div className="error error-txt">Password can't be blank</div>
         </div>
-       
         <input type="submit" value="Login"/>
-        {/* <hr/> */}
-        {/* <p>For Thechnical Issue</p> */}
-        {/* <Link onPress={() => Linking.openURL('aqibhassanzeb@gmail.com') } className='emaillinkdepttloginpage'>aqibhassanzeb@gmail.com</Link> */}
-       
+      
+        <div className="pass-txt mt-4"><Link to='#'>Forgot password?</Link></div>
       </form>
       
     </div>

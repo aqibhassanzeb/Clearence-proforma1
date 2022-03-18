@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { Button, Modal } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import Navbar1 from '../Homepage/Navbar1'
 import './StudentHomepage.css'
-// import { useHistory } from 'react-router-dom';
 import Studenthomepagenavbar from './studenthomepagenavbar';
 
 
 function MyVerticallyCenteredModal(props) {
+
     return (
       <Modal
         {...props}
@@ -35,10 +36,8 @@ function MyVerticallyCenteredModal(props) {
 
 
 const StudentHomepage = () => {
-    // const history=useHistory();
-    const Approved=()=>{
-        window.alert('Are you sure to apply for Clearence Proforma! ')
-    }
+  const navigate=useNavigate();
+  
     const [modal, setmodal] = useState(false)
     return (
        
@@ -51,6 +50,10 @@ const StudentHomepage = () => {
         <h3 className='wellcomeclearencetext'>Clearence Proforma </h3>
         
         <div className='homepagebuttons'>
+        <button className='btnhomepage1 btn-primary'
+        onClick={()=>{navigate('/registrationform')}} 
+        >Registar</button>
+        <br/>
         <button className='btnhomepage1 btn-primary'
          onClick={()=>setmodal(true)} 
         >Apply</button>

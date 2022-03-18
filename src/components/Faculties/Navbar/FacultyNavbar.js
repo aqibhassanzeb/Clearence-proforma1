@@ -4,7 +4,7 @@ import uoslogo from '../../../assets/images/UOswabi.png'
 import '../../Homepage/Navbar1.css'
 import './DepttNavbar.css'
 // import { useHistory } from 'react-router'
-import { Navbar,  Nav, Container,Form,FormControl,Button } from 'react-bootstrap'
+import { Navbar,  Nav, Container,Form,FormControl,Button, NavDropdown } from 'react-bootstrap'
 const FacultyNavbar = () => {
     let navigate = useNavigate();
     return (
@@ -34,14 +34,18 @@ const FacultyNavbar = () => {
       
 
         <Nav.Link className=' navbaritemlink'  onClick={() => { navigate('/facultyhomepage') }} >Home</Nav.Link>
-        <Nav.Link  className=' navbaritemlink dropdown-toggle' type='button' data-bs-toggle="dropdown" aria-expanded="true">StudentsRequest</Nav.Link>
+        {/* <Nav.Link  className=' navbaritemlink dropdown-toggle' type='button' data-bs-toggle="dropdown" aria-expanded="true">StudentsRequest</Nav.Link>
         
         <ul className="dropdown-menu" aria-labelledby="btnGroupDrop1">
       
       <li><Nav.Link className="dropdown-item" onClick={()=>{navigate('/facultyrequestclearence')}}>Clearence Requests</Nav.Link></li>
       <li><Nav.Link className="dropdown-item" onClick={()=>{navigate('/facultypendingstudents')}}>Pending Students</Nav.Link></li>
-    </ul>
-      
+    </ul> */}
+      <NavDropdown title="StudentsRequest" className='navbaritemlink' id="navbarScrollingDropdownfaculty">
+          <NavDropdown.Item onClick={()=>{navigate('/facultyrequestclearence')}}>Clearence Requests</NavDropdown.Item>
+          <NavDropdown.Item onClick={()=>{navigate('/facultypendingstudents')}}>Pending Students</NavDropdown.Item>
+        </NavDropdown>
+
         <Nav.Link className='navbaritemlink' onClick={() => { navigate('/career') }}>Help</Nav.Link>
         <Nav.Link className='navbaritemlink' onClick={() => { navigate('/contact') }}>SignOut</Nav.Link>
         

@@ -1,11 +1,40 @@
-import { Dropdown } from 'bootstrap'
-import React from 'react'
+import React,{useState} from 'react'
+import { Button, Modal } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-// import {useHistory} from 'react-router-dom'
 import './SignupForm.css'
+
+function MyVerticallyCenteredModal(props) {
+
+   return (
+     <Modal
+       {...props}
+       size="md"
+       aria-labelledby="contained-modal-title-vcenter"
+       centered
+     >
+       <Modal.Header closeButton>
+         <Modal.Title id="contained-modal-title-vcenter">
+           Clearacne-Proforma
+         </Modal.Title>
+       </Modal.Header>
+       <Modal.Body>
+         {/* <h4>Centered Modal</h4> */}
+         <p>
+         Are you sure to your data is correct! 
+         </p>
+       </Modal.Body>
+       <Modal.Footer>
+         <Button onClick={props.onHide}>Close</Button>
+         <Button >Conform</Button>
+       </Modal.Footer>
+     </Modal>
+   );
+ }
 
 
 const SignupForm = () => {
+
+   const [modal, setmodal] = useState(false)
    const navigate=useNavigate();
 
    return (
@@ -22,13 +51,13 @@ const SignupForm = () => {
                      <div className="input-data">
                         <input type="text" required />
                         <div className="underline"></div>
-                        <label for="">Full Name</label>
+                        <label >Full Name</label>
                      </div>
 
                      <div className="input-data">
                         <input type="text" required />
                         <div className="underline"></div>
-                        <label for="">Father Name</label>
+                        <label >Father Name</label>
                      </div></div>
 
                   <div className="form-row">
@@ -36,7 +65,7 @@ const SignupForm = () => {
                      <div className="input-data">
                         <input type="text" required placeholder=' ' />
                         <div className="underline"></div>
-                        <label for="">Program</label>
+                        <label >Program</label>
                      </div>
 
 
@@ -44,47 +73,34 @@ const SignupForm = () => {
                      <div className="input-data">
                         <input type="text" required />
                         <div className="underline"></div>
-                        <label for="">Semeter</label>
+                        <label >Semeter</label>
                      </div></div>
                   <div className="form-row">
                      <div className="input-data">
                         <input type="number" required />
                         <div className="underline"></div>
-                        <label for="">Roll No</label>
+                        <label >Roll No</label>
                      </div>
                      <div className="input-data">
                         <input type="text" required />
                         <div className="underline"></div>
-                        <label for="">Batch</label>
+                        <label >Batch</label>
                      </div></div>
                   <div className="form-row">
                      <div className="input-data">
                         <input type="text" required />
                         <div className="underline"></div>
-                        <label for="">Registration No</label>
+                        <label >Registration No</label>
                      </div>
                      <div className="input-data">
                         <input type="text" required />
                         <div className="underline"></div>
-                        <label for="">Session</label>
+                        <label >Session</label>
                      </div></div>
                   <div className="form-row">
 
 
-                     {/* <div className="dropdown">
-                        <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                           Department Select
-                        </button>
-                        <ul class="dropdown-menu btn-primary" aria-labelledby="dropdownMenuButton1">
-                           <li><a className="dropdown-item" href="#">Computer Sciece</a></li>
-                           <li><a className="dropdown-item" href="#">Pharmacy</a></li>
-                           <li><a className="dropdown-item" href="#">English</a></li>
-                           <li><a className="dropdown-item" href="#">Chemistry</a></li>
-                           <li><a className="dropdown-item" href="#">Physics</a></li>
-                           <li><a className="dropdown-item" href="#">Physics</a></li>
-                           <li><a className="dropdown-item" href="#">Physics</a></li>
-                        </ul>
-                     </div> */}
+                    
                      <div className='col-lg-5 col-md-5  selectitemoption'>
             <label className='selectdepttlabel'>Select Department</label>
             <select
@@ -106,21 +122,7 @@ const SignupForm = () => {
              </div>
 
                   </div>
-                  {/* <div className="row " >
-                     <div className='radiobtnsignupform' id='buttonss'>
-                        <div className='col-lg-6 col-sm-6 xs-6'  >
-
-
-                           <div class="form-check d-flex">
-                              <input class="form-check" type="checkbox" value="" id='Box' />
-                              <label className='confirm-radio'>
-                                 Confirm
-
-                              </label>
-                           </div>
-                        </div>
-                        </div>
-                        </div> */}
+                
                        
 <div className='row'>
 
@@ -131,8 +133,12 @@ const SignupForm = () => {
                            >Back</button>
 
                            <button type="button" className="btn btn-primary" id='Btnsignupformnext'
-                           onClick={()=> navigate('/signupmail')}
-                           >Next</button>
+                           onClick={()=>setmodal(true)}
+                           >Submit</button>
+                           <MyVerticallyCenteredModal
+        show={modal}
+        onHide={() => setmodal(false)}
+      />
                         </div>
 
                        

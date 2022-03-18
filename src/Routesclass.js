@@ -36,7 +36,7 @@ const Routesclass = () => {
 
             <Routes>
     <Route path="/login"  element={<Login/>}/>
-    <Route path="/signup"  element={<SignupForm/>}/>
+    <Route path="/registrationform"  element={<SignupForm/>}/>
     <Route path="/signupmail"  element={<SignUpmail/>}/>
     <Route path="/form"  element={<Form/>}/>
     <Route path="/navbar"  element={<Navbar1/>}/>

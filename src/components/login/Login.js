@@ -3,12 +3,11 @@ import './Login.css'
 import {Link} from 'react-router-dom'
 
 const Login = () => {
-  // const history=useHistory();
-    return (
+    return (<>
       <div className='Login'>
       <div className="login-wrapper">
       <header className='loginwriting'>Login Page</header>
-      <form action="#">
+      <form >
         <div className="field email">
           <div className="input-area">
             <input type="text" placeholder="Email Address"/>
@@ -25,12 +24,13 @@ const Login = () => {
           </div>
           <div className="error error-txt">Password can't be blank</div>
         </div>
-        <div className="pass-txt"><a href="#">Forgot password?</a></div>
+        <div className="pass-txt"><Link to='#'>Forgot password?</Link></div>
         <input type="submit" value="Login"/>
+      <div className="sign-txt">Not yet member? <Link to="/signupmail">Signup now</Link></div>
       </form>
-      <div className="sign-txt">Not yet member? <Link to="/signup">Signup now</Link></div>
     </div>
     </div>
+    </>
     )
 }
 

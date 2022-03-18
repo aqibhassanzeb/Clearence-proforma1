@@ -71,7 +71,7 @@ const navigate=useNavigate();
 <>
        
       <Studenthomepagenavbar/>
-<div>
+<div style={{marginTop:'70px'}}>
              <>
         <h1 className='headingstudentstatus'>Student Status</h1>
         <div  style={{overflow: "auto"}}>
@@ -80,7 +80,7 @@ const navigate=useNavigate();
   <thead>
     <tr >
       <th scope="col">Faculty Name</th>
-      <th scope="col">Reminder</th>
+      {/* <th scope="col">Reminder</th> */}
       <th scope="col">Issue</th>
       <th scope="col">Remarks</th>
       <th scope="col">Done</th>
@@ -92,12 +92,14 @@ const navigate=useNavigate();
     count.map((elem)=>
     
     <tr key={elem.Faculty}>
-      <th scope="row" className='facultytext'>{elem.Faculty}</th>
-      <td><AiFillBell className="bellicon" /></td>
-      <td><a href='' style={{pointerEvents:''}}><AiFillQuestionCircle    className="bellicon"  /></a></td>
+      <th scope="row" className='facultytext'
+      
+      >{elem.Faculty}</th>
+      {/* <td style={{paddingLeft:'30px'}}><AiFillBell className="bellicon" /></td> */}
+      <td><a href='' style={{pointerEvents:'',paddingLeft:'10px'}}><AiFillQuestionCircle    className="bellicon"  /></a></td>
       <td><p >remarks</p></td>
       <td><p style={{color:'blue'}}>process...</p></td>
-      {/* <td><AiFillCheckCircle className="bellicon" /></td> */}
+    
     </tr>
     
     )

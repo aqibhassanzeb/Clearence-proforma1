@@ -15,7 +15,7 @@ const Home = () => {
         <h3 className='wellcomeclearencetext'>Clearence Proforma </h3>
         
         <div className='homepagebuttons'>
-        <button className='btnhomepage12 btn-primary'
+        <button className='btnhomepage12'
          onClick={()=> navigate('/login')}
         >Student Login</button>
         <br/>

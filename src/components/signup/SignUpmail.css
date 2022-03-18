@@ -13,7 +13,7 @@
 }
 
 ::selection{
-  color: #fff;
+  /* color: #fff; */
   /* background: #5372F0; */
 }
 .wrapper{
@@ -144,8 +144,8 @@ form input[type="submit"]:hover{
   background: #2c52ed;
 }
 .loginwriting{
-  text-shadow: blue;
-  color: dodgerblue;
+  text-shadow: #5372F0;
+  color: #5372F0;
 }
 
 #Btnsigupmailback{
@@ -173,4 +173,8 @@ form input[type="submit"]:hover{
   
 
   
+}
+.signupmailformbtn{
+  background-color: #5372F0;
+  color: white;
 }

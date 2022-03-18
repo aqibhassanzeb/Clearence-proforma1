@@ -10,7 +10,7 @@ const Navbar1 = () => {
         <div>
            
 
-<Navbar bg="dark" expand="lg" style={{position:"sticky"}} fixed='top' >
+<Navbar bg="dark" expand="lg" fixed='top' >
   <Container fluid>
  <a href="https://uoswabi.edu.pk/">
   <img
@@ -39,16 +39,7 @@ const Navbar1 = () => {
         
       
       </Nav>
-      <Form className="d-flex">
-        <FormControl
-        style={{color:'black'}}
-          type="search"
-          placeholder="Search"
-          className="me-2 searchtextfield"
-          aria-label="Search"
-        />
-        <Button className='navbarbutton1' variant="outline-success">Search</Button>
-      </Form>
+     
     </Navbar.Collapse>
   </Container>
 </Navbar>
